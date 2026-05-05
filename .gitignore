@@ -1,0 +1,21 @@
+# Dependencias
+node_modules/
+
+# Compilación
+out/
+*.map
+
+# VS Code
+.vscode-test/
+.history/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración de VS Code (opcional - quitamos el comentario si quieres ignorar settings locales)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
