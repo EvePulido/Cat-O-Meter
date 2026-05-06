@@ -24,7 +24,8 @@
         {
           "type": "webview",
           "id": "cat-o-meter.view",
-          "name": "Cat-O-Meter"
+          "name": "Cat-O-Meter",
+          "icon": "media/icon.svg"
         }
       ]
     }
