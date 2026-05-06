@@ -2,14 +2,14 @@
   "name": "cat-o-meter",
   "displayName": "Cat-O-Meter",
   "description": "Tu gato reacciona a los errores de tu código",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "EvePulido",
-  "icon": "media/icon.svg",
+  "icon": "media/icon.png",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/EvePulido/Cat-O-Meter.git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/EvePulido/Cat-O-Meter.git",
   "engines": {
     "vscode": "^1.85.0"
   },
