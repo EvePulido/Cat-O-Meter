@@ -14,7 +14,17 @@
     "vscode": "^1.85.0"
   },
   "categories": [
-    "Other"
+    "Other",
+    "Visualization"
+  ],
+  "keywords": [
+    "cat",
+    "gato",
+    "errors",
+    "fun",
+    "diagnostic",
+    "meme",
+    "productivity"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
