@@ -16,6 +16,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
 
   private view?: vscode.WebviewView;
   private readonly context: vscode.ExtensionContext;
+  private lastAssetIndex: number = -1;
 
   constructor(context: vscode.ExtensionContext) {
     this.context = context;
@@ -68,7 +69,18 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
   }
 
   private authorizeAsset(level: SeverityLevel): string {
-    const randomIndex = Math.floor(Math.random() * level.assets.length);
+    let randomIndex: number;
+
+    if (level.assets.length === 1) {
+      randomIndex = 0;
+    } else {
+      do {
+        randomIndex = Math.floor(Math.random() * level.assets.length);
+      } while (randomIndex === this.lastAssetIndex);
+    }
+
+    this.lastAssetIndex = randomIndex;
+
     const diskUri = vscode.Uri.joinPath(
       this.context.extensionUri,
       "media",
@@ -80,7 +92,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
   private getHtml(webview: vscode.Webview): string {
     const nonce = Array.from({ length: 32 }, () =>
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"[
-        Math.floor(Math.random() * 62)
+      Math.floor(Math.random() * 62)
       ]
     ).join("");
 
@@ -105,7 +117,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
       max-width: 100%;
       max-height: 100%;
       border-radius: 8px;
-      transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.6s ease;  /* más lento y suave */
       opacity: 0;
     }
     #cat-img.visible {
@@ -117,23 +129,20 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
   <img id="cat-img" src="" alt="Cat" />
   <script nonce="${nonce}">
     const img = document.getElementById('cat-img');
-    
+
     window.addEventListener('message', ({ data }) => {
       if (data.command !== 'update') return;
 
-      img.classList.remove('visible');
+      // Fade out suave
+      img.style.opacity = '0';
 
       setTimeout(() => {
         img.src = data.imageUri;
-        
+
         img.onload = () => {
-          img.classList.add('visible');
+          img.style.opacity = '1';
         };
-        
-        if (img.complete) {
-          img.classList.add('visible');
-        }
-      }, 250); 
+      }, 400);
     });
   </script>
 </body>
