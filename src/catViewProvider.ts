@@ -17,6 +17,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
   private view?: vscode.WebviewView;
   private readonly context: vscode.ExtensionContext;
   private lastAssetIndex: number = -1;
+  private currentLevelId: string | null = null; // <-- nivel actual guardado
 
   constructor(context: vscode.ExtensionContext) {
     this.context = context;
@@ -38,6 +39,9 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.html = this.getHtml(webviewView.webview);
 
+    // Al abrir la vista, forzar actualización aunque el nivel no haya "cambiado"
+    this.currentLevelId = null;
+
     const activeEditor = vscode.window.activeTextEditor;
     if (activeEditor) {
       this.updateDiagnostics(activeEditor.document.uri);
@@ -48,15 +52,20 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
     if (!this.view) return;
 
     let errors = 0;
-    let warnings = 0;
 
     if (uri) {
       const counts = countDiagnostics(uri);
       errors = counts.errors;
-      warnings = counts.warnings;
     }
 
     const level = getSeverityLevel(errors);
+
+    // Solo cambia la imagen si el nivel es diferente al actual
+    if (level.id === this.currentLevelId) return;
+
+    this.currentLevelId = level.id;
+    this.lastAssetIndex = -1; // reset para que no excluya el índice anterior del nivel viejo
+
     const imageUri = this.authorizeAsset(level);
 
     const message: UpdateMessage = {
@@ -117,7 +126,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
       max-width: 100%;
       max-height: 100%;
       border-radius: 8px;
-      transition: opacity 0.6s ease;  /* más lento y suave */
+      transition: opacity 0.6s ease;
       opacity: 0;
     }
     #cat-img.visible {
