@@ -2,6 +2,10 @@
 
 *Read this in other languages: [Español](CHANGELOG.es.md)*
 
+## [1.1.1] - 2026-06-05
+### Fixed
+- Fixed a bug where the cat image would disappear when switching sidebar panels or tabs, by implementing a load-handshake verification.
+
 ## [1.1.0] - 2026-06-05
 ### Added
 - Added 2 new cat reactions for each severity level (8 new reactions in total).

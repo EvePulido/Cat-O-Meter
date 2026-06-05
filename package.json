@@ -2,7 +2,7 @@
   "name": "cat-o-meter",
   "displayName": "Cat-O-Meter",
   "description": "Tu gato reacciona a los errores de tu código",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "EvePulido",
   "icon": "media/icon.png",
   "repository": {

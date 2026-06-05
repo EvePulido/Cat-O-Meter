@@ -39,13 +39,18 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.html = this.getHtml(webviewView.webview);
 
-    // Al abrir la vista, forzar actualización aunque el nivel no haya "cambiado"
-    this.currentLevelId = null;
-
-    const activeEditor = vscode.window.activeTextEditor;
-    if (activeEditor) {
-      this.updateDiagnostics(activeEditor.document.uri);
-    }
+    // Escuchar cuando el Webview termine de cargar y esté listo
+    webviewView.webview.onDidReceiveMessage(
+      (message) => {
+        if (message.command === "ready") {
+          this.currentLevelId = null; // Forzar actualización
+          const activeEditor = vscode.window.activeTextEditor;
+          this.updateDiagnostics(activeEditor ? activeEditor.document.uri : null);
+        }
+      },
+      undefined,
+      this.context.subscriptions
+    );
   }
 
   public updateDiagnostics(uri: vscode.Uri | null): void {
@@ -137,6 +142,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
 <body>
   <img id="cat-img" src="" alt="Cat" />
   <script nonce="${nonce}">
+    const vscode = acquireVsCodeApi();
     const img = document.getElementById('cat-img');
 
     window.addEventListener('message', ({ data }) => {
@@ -153,6 +159,9 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
         };
       }, 400);
     });
+
+    // Indicar al backend que el Webview está listo para recibir la imagen
+    vscode.postMessage({ command: 'ready' });
   </script>
 </body>
 </html>`;

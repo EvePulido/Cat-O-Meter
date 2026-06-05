@@ -2,6 +2,10 @@
 
 *Leer en otro idioma: [English](CHANGELOG.md)*
 
+## [1.1.1] - 2026-06-05
+### Fixed
+- Corregido un error que hacía que la imagen del michi desapareciera al alternar entre pestañas o paneles de la barra lateral, implementando una confirmación de carga inicial.
+
 ## [1.1.0] - 2026-06-05
 ### Added
 - Agregados 2 nuevos michis por cada nivel de severidad (8 nuevas reacciones en total).
