@@ -26,7 +26,7 @@ El tipo de gato que aparece depende del número de errores en tu archivo activo:
 
 Si quieres expandir la colección y agregar tus propios michis o memes:
 
-1.  Agrega tus imágenes a la carpeta `/media`. (Se recomienda usar formato cuadrado para una mejor experiencia visual).
+1.  Agrega tus imágenes a la carpeta `/media`. (Se recomienda usar formato cuadrado y formato WebP para una mejor experiencia visual y optimización de peso).
 2.  Abre el archivo `src/severityLevels.ts` y modifica el arreglo `SEVERITY_LEVELS`. Simplemente agrega los nombres de tus nuevos archivos al arreglo de `assets` del nivel correspondiente. El código se encarga de la aleatoriedad automáticamente.
 
 ## Instalación para desarrollo
