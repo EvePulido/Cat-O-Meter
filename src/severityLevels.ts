@@ -45,7 +45,7 @@ export const SEVERITY_LEVELS: SeverityLevel[] = [
     id: "stressed",
     label: "Houston, tenemos un problema",
     minErrors: 4,
-    maxErrors: 9,
+    maxErrors: 7,
     assets: [
       "stressed_1.webp",
       "stressed_2.webp",
@@ -60,7 +60,7 @@ export const SEVERITY_LEVELS: SeverityLevel[] = [
   {
     id: "chaos",
     label: "CATÁSTROFE TOTAL",
-    minErrors: 10,
+    minErrors: 8,
     maxErrors: Infinity,
     assets: [
       "chaos_1.webp",
