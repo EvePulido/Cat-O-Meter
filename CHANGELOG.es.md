@@ -2,6 +2,10 @@
 
 *Leer en otro idioma: [English](CHANGELOG.md)*
 
+## [1.1.2] - 2026-06-18
+### Changed
+- Traducida la descripción de la extensión en `package.json` al inglés.
+
 ## [1.1.1] - 2026-06-05
 ### Fixed
 - Corregido un error que hacía que la imagen del michi desapareciera al alternar entre pestañas o paneles de la barra lateral, implementando una confirmación de carga inicial.

@@ -6,4 +6,5 @@ tsconfig.json
 package-lock.json
 out/__tests__
 out/__mocks__
-*.es.md
+*.es.md
+media/cat-o-meter.gif

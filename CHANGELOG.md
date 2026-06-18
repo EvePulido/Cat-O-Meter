@@ -2,6 +2,10 @@
 
 *Read this in other languages: [Español](CHANGELOG.es.md)*
 
+## [1.1.2] - 2026-06-18
+### Changed
+- Translated the extension description in `package.json` to English.
+
 ## [1.1.1] - 2026-06-05
 ### Fixed
 - Fixed a bug where the cat image would disappear when switching sidebar panels or tabs, by implementing a load-handshake verification.
