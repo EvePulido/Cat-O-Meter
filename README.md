@@ -1,7 +1,7 @@
 <h1 align="center">Cat-O-Meter 🐱</h1>
 
 <p align="center">
-  <i>Read this in other languages: <a href="README.es.md">Español</a></i>
+  <i>Read this in other languages: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/README.es.md">Español</a></i>
 </p>
 
 <p align="center">
@@ -11,6 +11,9 @@
 <p align="center">
   <a href="https://marketplace.visualstudio.com/items?itemName=EvePulido.cat-o-meter">
     <img src="https://img.shields.io/badge/VS_Code_Marketplace-Install-blue?style=flat-square&logo=visual-studio-code" alt="VS Code Marketplace">
+  </a>
+  <a href="https://open-vsx.org/extension/EvePulido/cat-o-meter">
+    <img src="https://img.shields.io/open-vsx/v/EvePulido/cat-o-meter?style=flat-square&color=purple" alt="Open VSX">
   </a>
   <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/EvePulido/Cat-O-Meter?style=flat-square" alt="License">

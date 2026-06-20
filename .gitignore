@@ -19,3 +19,7 @@ desktop.ini
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
+
+# VSIX extension packages
+*.vsix
+
