@@ -7,4 +7,5 @@ package-lock.json
 out/__tests__
 out/__mocks__
 *.es.md
-media/cat-o-meter.gif
+media/cat-o-meter.gif
+convert_images.py

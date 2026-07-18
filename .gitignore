@@ -23,3 +23,5 @@ desktop.ini
 # VSIX extension packages
 *.vsix
 
+# Scripts temporales o utilidades locales
+convert_images.py

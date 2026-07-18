@@ -2,6 +2,11 @@
 
 *Read this in other languages: [Español](CHANGELOG.es.md)*
 
+## [1.1.3] - 2026-07-17
+### Added
+- Added 1 new cat reaction for each severity level (4 new reactions in total).
+- Now officially available on the Open VSX Registry!
+
 ## [1.1.2] - 2026-06-18
 ### Changed
 - Translated the extension description in `package.json` to English.

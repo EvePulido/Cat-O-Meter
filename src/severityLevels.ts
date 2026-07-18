@@ -23,6 +23,7 @@ export const SEVERITY_LEVELS: SeverityLevel[] = [
       "zen_6.webp",
       "zen_7.webp",
       "zen_8.webp",
+      "zen_9.webp",
     ],
   },
   {
@@ -39,6 +40,7 @@ export const SEVERITY_LEVELS: SeverityLevel[] = [
       "midl_6.webp",
       "midl_7.webp",
       "midl_8.webp",
+      "midl_9.webp",
     ],
   },
   {
@@ -55,6 +57,7 @@ export const SEVERITY_LEVELS: SeverityLevel[] = [
       "stressed_6.webp",
       "stressed_7.webp",
       "stressed_8.webp",
+      "stressed_9.webp",
     ],
   },
   {
@@ -71,6 +74,7 @@ export const SEVERITY_LEVELS: SeverityLevel[] = [
       "chaos_6.webp",
       "chaos_7.webp",
       "chaos_8.webp",
+      "chaos_9.webp",
     ],
   },
 ];

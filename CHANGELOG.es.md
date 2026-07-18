@@ -2,6 +2,11 @@
 
 *Leer en otro idioma: [English](CHANGELOG.md)*
 
+## [1.1.3] - 2026-07-17
+### Added
+- Agregado 1 nuevo michi por cada nivel de severidad (4 nuevas reacciones en total).
+- ¡Ahora disponible oficialmente en el registro Open VSX!
+
 ## [1.1.2] - 2026-06-18
 ### Changed
 - Traducida la descripción de la extensión en `package.json` al inglés.
