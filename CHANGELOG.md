@@ -1,6 +1,10 @@
 # Change Log
 
-*Read this in other languages: [Español](CHANGELOG.es.md)*
+*Read this in other languages: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/CHANGELOG.es.md" target="_blank">Español</a>*
+
+## [1.1.4] - 2026-07-17
+### Fixed
+- Fixed an issue where cross-language markdown links were failing to route correctly in the Open VSX registry.
 
 ## [1.1.3] - 2026-07-17
 ### Added

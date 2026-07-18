@@ -1,6 +1,10 @@
 # Registro de Cambios
 
-*Leer en otro idioma: [English](CHANGELOG.md)*
+*Leer en otro idioma: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/CHANGELOG.md" target="_blank">English</a>*
+
+## [1.1.4] - 2026-07-17
+### Fixed
+- Corregido un error que rompía los enlaces entre idiomas en el visor web de Open VSX.
 
 ## [1.1.3] - 2026-07-17
 ### Added

@@ -1,7 +1,7 @@
 <h1 align="center">Cat-O-Meter 🐱</h1>
 
 <p align="center">
-  <i>Leer en otro idioma: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/README.md">English</a></i>
+  <i>Leer en otro idioma: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/README.md" target="_blank">English</a></i>
 </p>
 
 <p align="center">
