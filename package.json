@@ -50,14 +50,30 @@
             "halloween"
           ],
           "enumDescriptions": [
-            "Automático (Halloween en octubre)",
-            "Gatos clásicos",
-            "Gatos de Halloween"
+            "Automatic (Halloween in October)",
+            "Classic cats",
+            "Halloween cats"
           ],
           "default": "auto",
-          "description": "Paquete de imágenes del gato"
+          "description": "Image pack for the cat"
         }
       }
+    },
+    "commands": [
+      {
+        "command": "cat-o-meter.selectPack",
+        "title": "Cat-O-Meter: Select Image Pack",
+        "icon": "$(gear)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "cat-o-meter.selectPack",
+          "when": "view == cat-o-meter.view",
+          "group": "navigation"
+        }
+      ]
     }
   },
   "scripts": {
