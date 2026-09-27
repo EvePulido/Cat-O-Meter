@@ -2,6 +2,12 @@
 
 *Leer en otro idioma: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/CHANGELOG.md" target="_blank">English</a>*
 
+## [1.2.0] - 2026-09-27
+### Added
+- Agregado el paquete de imágenes de Halloween con cambio estacional automático (Halloween en octubre).
+- Agregada la configuración `catOMeter.imagePack` para alternar entre `auto`, `classic` y `halloween`.
+- Agregados listeners para cambios de visibilidad y configuración para garantizar la sincronización del webview.
+
 ## [1.1.4] - 2026-07-17
 ### Fixed
 - Corregido un error que rompía los enlaces entre idiomas en el visor web de Open VSX.

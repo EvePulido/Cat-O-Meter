@@ -27,6 +27,7 @@
 ## Table of Contents
 - [Features](#features)
 - [Severity Levels](#severity-levels)
+- [Configuration](#configuration)
 - [How to Use](#how-to-use)
 - [Customization & Contributions](#customization--contributions)
 - [Development Setup](#development-setup)
@@ -40,6 +41,7 @@ Cat-O-Meter is a VS Code extension that anchors a dynamic panel of cats to your 
 * **Dynamic Selection:** Each error level has its own pool of cats. The extension randomly selects one when the status changes.
 * **Real-time Updates:** Reactions update as you type or save, reflecting the current file state.
 * **4 Severity Levels:** From clean code to total chaos, with a distinct cat collection for each level.
+* **Themed Packs:** Includes Classic and Halloween packs with automated seasonal switching.
 * **Unobtrusive Integration:** Works from the sidebar panel without interrupting your workflow.
 * **Privacy-Focused:** Runs 100% offline. Zero network requests, keeping your code completely private.
 * **Performance-Optimized:** Highly compressed WebP media assets ensure instantaneous loading and a minimal extension footprint.
@@ -52,9 +54,18 @@ The type of cat that appears depends on the number of errors in your active file
 | Level | Errors | Collection Description |
 | :--- | :--- | :--- |
 | `zen` | 0 | Don't touch it 😎 |
-| `mild` | 1 - 3 | Nothing a console.log can't fix 🤔 |
+| `midl` | 1 - 3 | Nothing a console.log can't fix 🤔 |
 | `stressed` | 4 - 7 | Minor changes 😌 |
 | `chaos` | 8+ | This worked yesterday... 😰 |
+
+## Configuration
+
+You can customize the cat image pack from your VS Code Settings (`Ctrl+,` or `Cmd+,` and search for `Cat-O-Meter`):
+
+* `catOMeter.imagePack`: Choose which image pack to use.
+  * `auto` (Default): Automatically displays the **Halloween** pack during October, and the **Classic** pack the rest of the year.
+  * `classic`: Always use the classic cat collection.
+  * `halloween`: Always use the Halloween spooky cat collection.
 
 ## How to Use
 

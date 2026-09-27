@@ -27,6 +27,7 @@
 ## Tabla de Contenidos
 - [Características](#características)
 - [Niveles de severidad](#niveles-de-severidad)
+- [Configuración](#configuración)
 - [Cómo usar](#cómo-usar)
 - [Personalización y Contribuciones](#personalización-y-contribuciones)
 - [Instalación para desarrollo](#instalación-para-desarrollo)
@@ -40,6 +41,7 @@ Cat-O-Meter es una extensión para VS Code que ancla una vista dinámica de mich
 * **Selección dinámica:** Cada nivel de error tiene su propio conjunto de gatos. La extensión elige uno aleatoriamente cuando cambia el estado.
 * **Actualización en tiempo real:** Las reacciones se actualizan al escribir o guardar, reflejando el estado actual del archivo.
 * **4 niveles de severidad:** Desde código limpio hasta caos total, con una colección distinta en cada nivel.
+* **Paquetes temáticos:** Incluye paquetes Clásico y Halloween con cambio estacional automático.
 * **Integración discreta:** Funciona desde el panel lateral sin interrumpir tu flujo de trabajo.
 * **Enfoque en Privacidad:** Funciona 100% sin conexión. Realiza cero peticiones de red, manteniendo tu código completamente privado.
 * **Rendimiento Optimizado:** Recursos multimedia altamente comprimidos en WebP que garantizan una carga instantánea y un peso mínimo.
@@ -52,9 +54,18 @@ El tipo de gato que aparece depende del número de errores en tu archivo activo:
 | Nivel | Errores | Descripción de la Colección |
 | :--- | :--- | :--- |
 | `zen` | 0 | No lo toques 😎 |
-| `mild` | 1 - 3 | Nada que un console.log no arregle 🤔 |
+| `midl` | 1 - 3 | Nada que un console.log no arregle 🤔 |
 | `stressed` | 4 - 7 | Cambios menores 😌 |
 | `chaos` | 8+ | Esto funcionaba ayer... 😰 |
+
+## Configuración
+
+Puedes personalizar el paquete de michis desde la configuración de VS Code (`Ctrl+,` o `Cmd+,` buscando `Cat-O-Meter`):
+
+* `catOMeter.imagePack`: Selecciona el paquete de imágenes a usar.
+  * `auto` (Por defecto): Muestra automáticamente el pack de **Halloween** durante octubre y el pack **Clásico** el resto del año.
+  * `classic`: Usa siempre la colección de gatos clásicos.
+  * `halloween`: Usa siempre la colección de gatos de Halloween.
 
 ## Cómo usar
 

@@ -2,7 +2,7 @@
   "name": "cat-o-meter",
   "displayName": "Cat-O-Meter",
   "description": "A cat reacting to your code errors",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "publisher": "EvePulido",
   "icon": "media/icon.png",
   "repository": {
@@ -38,6 +38,26 @@
           "icon": "media/icon.svg"
         }
       ]
+    },
+    "configuration": {
+      "title": "Cat-O-Meter",
+      "properties": {
+        "catOMeter.imagePack": {
+          "type": "string",
+          "enum": [
+            "auto",
+            "classic",
+            "halloween"
+          ],
+          "enumDescriptions": [
+            "Automático (Halloween en octubre)",
+            "Gatos clásicos",
+            "Gatos de Halloween"
+          ],
+          "default": "auto",
+          "description": "Paquete de imágenes del gato"
+        }
+      }
     }
   },
   "scripts": {

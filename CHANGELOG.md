@@ -2,6 +2,12 @@
 
 *Read this in other languages: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/CHANGELOG.es.md" target="_blank">Español</a>*
 
+## [1.2.0] - 2026-09-27
+### Added
+- Added Halloween image pack with seasonal automatic switching (defaults to Halloween in October).
+- Added `catOMeter.imagePack` configuration setting to choose between `auto`, `classic`, or `halloween`.
+- Added listeners for visibility changes and configuration updates to ensure webview synchronization.
+
 ## [1.1.4] - 2026-07-17
 ### Fixed
 - Fixed an issue where cross-language markdown links were failing to route correctly in the Open VSX registry.

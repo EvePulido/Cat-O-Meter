@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import {
   countDiagnostics,
+  getSeasonalDefaultPack,
   getSeverityLevel,
   SeverityLevel,
 } from "./severityLevels";
@@ -51,10 +52,44 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
       undefined,
       this.context.subscriptions
     );
+
+    // Reaccionar cuando la vista vuelve a ser visible
+    webviewView.onDidChangeVisibility(
+      () => {
+        if (webviewView.visible) {
+          this.currentLevelId = null; // forzar actualización aunque el nivel lógico no haya cambiado
+          const activeEditor = vscode.window.activeTextEditor;
+          this.updateDiagnostics(activeEditor ? activeEditor.document.uri : null);
+        }
+      },
+      undefined,
+      this.context.subscriptions
+    );
+
+    // Reaccionar a cambios de configuración en el paquete de imágenes
+    vscode.workspace.onDidChangeConfiguration(
+      (e) => {
+        if (e.affectsConfiguration("catOMeter.imagePack")) {
+          this.currentLevelId = null;
+          const editor = vscode.window.activeTextEditor;
+          this.updateDiagnostics(editor?.document.uri ?? null);
+        }
+      },
+      undefined,
+      this.context.subscriptions
+    );
+  }
+
+  private resolveActivePack(): string {
+    const configured = vscode.workspace
+      .getConfiguration("catOMeter")
+      .get<string>("imagePack", "auto");
+
+    return configured === "auto" ? getSeasonalDefaultPack() : (configured ?? "classic");
   }
 
   public updateDiagnostics(uri: vscode.Uri | null): void {
-    if (!this.view) return;
+    if (!this.view || !this.view.visible) return;
 
     let errors = 0;
 
@@ -63,7 +98,8 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
       errors = counts.errors;
     }
 
-    const level = getSeverityLevel(errors);
+    const packId = this.resolveActivePack();
+    const level = getSeverityLevel(errors, packId);
 
     // Solo cambia la imagen si el nivel es diferente al actual
     if (level.id === this.currentLevelId) return;
@@ -71,7 +107,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
     this.currentLevelId = level.id;
     this.lastAssetIndex = -1; // reset para que no excluya el índice anterior del nivel viejo
 
-    const imageUri = this.authorizeAsset(level);
+    const imageUri = this.authorizeAsset(level, packId);
 
     const message: UpdateMessage = {
       command: "update",
@@ -82,7 +118,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
     this.view.webview.postMessage(message);
   }
 
-  private authorizeAsset(level: SeverityLevel): string {
+  private authorizeAsset(level: SeverityLevel, packId: string): string {
     let randomIndex: number;
 
     if (level.assets.length === 1) {
@@ -98,6 +134,7 @@ export class CatViewProvider implements vscode.WebviewViewProvider {
     const diskUri = vscode.Uri.joinPath(
       this.context.extensionUri,
       "media",
+      packId,
       level.assets[randomIndex]
     );
     return this.view!.webview.asWebviewUri(diskUri).toString();
