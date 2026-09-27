@@ -54,7 +54,7 @@ The type of cat that appears depends on the number of errors in your active file
 | Level | Errors | Collection Description |
 | :--- | :--- | :--- |
 | `zen` | 0 | Don't touch it 😎 |
-| `midl` | 1 - 3 | Nothing a console.log can't fix 🤔 |
+| `middle` | 1 - 3 | Nothing a console.log can't fix 🤔 |
 | `stressed` | 4 - 7 | Minor changes 😌 |
 | `chaos` | 8+ | This worked yesterday... 😰 |
 

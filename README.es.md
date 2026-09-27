@@ -54,7 +54,7 @@ El tipo de gato que aparece depende del número de errores en tu archivo activo:
 | Nivel | Errores | Descripción de la Colección |
 | :--- | :--- | :--- |
 | `zen` | 0 | No lo toques 😎 |
-| `midl` | 1 - 3 | Nada que un console.log no arregle 🤔 |
+| `middle` | 1 - 3 | Nada que un console.log no arregle 🤔 |
 | `stressed` | 4 - 7 | Cambios menores 😌 |
 | `chaos` | 8+ | Esto funcionaba ayer... 😰 |
 

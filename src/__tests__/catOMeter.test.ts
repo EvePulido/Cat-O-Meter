@@ -76,12 +76,12 @@ describe("getSeverityLevel", () => {
     expect(getSeverityLevel(0).id).toBe("zen");
   });
 
-  test("1 error → midl", () => {
-    expect(getSeverityLevel(1).id).toBe("midl");
+  test("1 error → middle", () => {
+    expect(getSeverityLevel(1).id).toBe("middle");
   });
 
-  test("3 errores → midl (límite superior)", () => {
-    expect(getSeverityLevel(3).id).toBe("midl");
+  test("3 errores → middle (límite superior)", () => {
+    expect(getSeverityLevel(3).id).toBe("middle");
   });
 
   test("4 errores → stressed (límite inferior)", () => {
@@ -109,7 +109,7 @@ describe("getSeverityLevel", () => {
   test("obtiene niveles del pack halloween explícitamente", () => {
     const level = getSeverityLevel(0, "halloween");
     expect(level.id).toBe("zen");
-    expect(level.assets[0]).toBe("zen_1.png");
+    expect(level.assets[0]).toBe("zen_1.webp");
   });
 
   test("pack desconocido recurre al pack por defecto (classic)", () => {
@@ -186,18 +186,18 @@ describe("Estabilidad de nivel", () => {
     expect(a.id).toBe(b.id);
   });
 
-  test("cambiar de 1 a 3 errores no cambia de nivel (ambos son midl)", () => {
+  test("cambiar de 1 a 3 errores no cambia de nivel (ambos son middle)", () => {
     const a = getSeverityLevel(1);
     const b = getSeverityLevel(3);
     expect(a.id).toBe(b.id);
-    expect(a.id).toBe("midl");
+    expect(a.id).toBe("middle");
   });
 
   test("cruzar el umbral 3→4 sí cambia de nivel", () => {
     const antes = getSeverityLevel(3);
     const despues = getSeverityLevel(4);
     expect(antes.id).not.toBe(despues.id);
-    expect(antes.id).toBe("midl");
+    expect(antes.id).toBe("middle");
     expect(despues.id).toBe("stressed");
   });
 
