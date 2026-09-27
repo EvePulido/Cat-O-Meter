@@ -67,6 +67,8 @@ Puedes personalizar el paquete de michis desde la configuración de VS Code (`Ct
   * `classic`: Usa siempre la colección de gatos clásicos.
   * `halloween`: Usa siempre la colección de gatos de Halloween.
 
+> 💡 **¿Prefieres conservar los gatos clásicos todo el año?** Cambia `catOMeter.imagePack` a `classic` en tu configuración para mantener la colección tradicional sin importar la fecha.
+
 ## Cómo usar
 
 1. Haz clic en el icono de **Cat-O-Meter** en la barra de actividades (barra lateral izquierda).

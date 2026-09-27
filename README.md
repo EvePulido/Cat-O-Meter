@@ -67,6 +67,8 @@ You can customize the cat image pack from your VS Code Settings (`Ctrl+,` or `Cm
   * `classic`: Always use the classic cat collection.
   * `halloween`: Always use the Halloween spooky cat collection.
 
+> 💡 **Prefer to skip the Halloween theme?** Set `catOMeter.imagePack` to `classic` in your settings to keep the classic cats year-round.
+
 ## How to Use
 
 1. Click on the **Cat-O-Meter** icon in the Activity Bar (sidebar on the left).
