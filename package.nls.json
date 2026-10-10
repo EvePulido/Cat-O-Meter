@@ -1,0 +1,8 @@
+{
+  "extension.description": "A cat reacting to your code errors",
+  "config.imagePack.description": "Image pack for the cat",
+  "config.imagePack.auto": "Automatic (Halloween in October)",
+  "config.imagePack.classic": "Classic cats",
+  "config.imagePack.halloween": "Halloween cats",
+  "command.selectPack.title": "Cat-O-Meter: Select Image Pack"
+}

@@ -2,6 +2,11 @@
 
 *Leer en otro idioma: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/CHANGELOG.md" target="_blank">English</a>*
 
+## [1.3.0] - 2026-10-10
+### Added
+- Agregado un logo de Halloween para la extensión, también mostrado arriba del README.
+- Agregada localización inglés/español: los ajustes y el selector de paquete siguen el idioma de VS Code.
+
 ## [1.2.0] - 2026-09-27
 ### Added
 - Agregado el paquete de imágenes de Halloween con cambio estacional automático (Halloween en octubre).
