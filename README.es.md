@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="media/icon-halloween.png" alt="Cat-O-Meter logo" width="128">
+</p>
+
 <h1 align="center">Cat-O-Meter 🐱</h1>
 
 <p align="center">

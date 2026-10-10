@@ -1,0 +1,8 @@
+{
+  "extension.description": "Un gato que reacciona a los errores de tu código",
+  "config.imagePack.description": "Paquete de imágenes del gato",
+  "config.imagePack.auto": "Automático (Halloween en octubre)",
+  "config.imagePack.classic": "Gatos clásicos",
+  "config.imagePack.halloween": "Gatos de Halloween",
+  "command.selectPack.title": "Cat-O-Meter: Seleccionar paquete de imágenes"
+}

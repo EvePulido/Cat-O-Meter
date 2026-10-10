@@ -42,23 +42,23 @@ export function activate(context: vscode.ExtensionContext) {
       }> = [
           {
             label: "$(sparkle) Auto",
-            description: "Halloween en octubre, clásico el resto del año",
+            description: vscode.l10n.t("Halloween in October, classic the rest of the year"),
             value: "auto",
           },
           {
             label: "$(circle-outline) Classic",
-            description: "Gatos clásicos todo el año",
+            description: vscode.l10n.t("Classic cats all year"),
             value: "classic",
           },
           {
             label: "$(bug) Halloween",
-            description: "Gatos de Halloween todo el año",
+            description: vscode.l10n.t("Halloween cats all year"),
             value: "halloween",
           },
         ];
 
       const picked = await vscode.window.showQuickPick(options, {
-        placeHolder: "Selecciona el paquete de imágenes de Cat-O-Meter",
+        placeHolder: vscode.l10n.t("Select the Cat-O-Meter image pack"),
       });
 
       if (picked) {

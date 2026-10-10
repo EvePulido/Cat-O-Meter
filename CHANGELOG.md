@@ -2,6 +2,11 @@
 
 *Read this in other languages: <a href="https://github.com/EvePulido/Cat-O-Meter/blob/main/CHANGELOG.es.md" target="_blank">Español</a>*
 
+## [1.3.0] - 2026-10-10
+### Added
+- Added a Halloween extension logo, also shown at the top of the README.
+- Added English/Spanish localization: settings and the pack selector now follow the VS Code display language.
+
 ## [1.2.0] - 2026-09-27
 ### Added
 - Added Halloween image pack with seasonal automatic switching (defaults to Halloween in October).
